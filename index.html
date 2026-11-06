@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERUMDAM Pelangi Timur - Layanan Air Minum Terpercaya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Font Family Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0e7490 0%, #0369a1 50%, #1d4ed8 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- TOP BAR -->
+    <div class="bg-sky-900 text-slate-200 text-xs py-2 px-4 sm:px-8 border-b border-sky-800 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <span class="flex items-center gap-1"><i data-lucide="phone" class="w-3.5 h-3.5 text-sky-400"></i> Call Center: (0717) 123-4567</span>
+            <span class="hidden md:flex items-center gap-1"><i data-lucide="mail" class="w-3.5 h-3.5 text-sky-400"></i> humas@pelangitimur.co.id</span>
+            <span class="hidden lg:flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-sky-400"></i> Senin - Jumat: 08:00 - 16:00 WIB</span>
+        </div>
+        <div class="flex items-center space-x-3">
+            <a href="#whistleblowing" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold px-2.5 py-0.5 rounded text-[11px] transition">WBS System</a>
+            <a href="#cek-tagihan" class="bg-sky-500 hover:bg-sky-600 text-white font-medium px-2.5 py-0.5 rounded text-[11px] transition">Cek Tagihan Quick</a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-slate-200 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- BRAND LOGO -->
+                <!-- BRAND LOGO RESMI PERUMDAM -->
+<div class="flex items-center cursor-pointer" onclick="navigateTo('beranda')">
+    <img
+        src="assets/logo-perumdam.png"
+        alt="Logo Resmi PERUMDAM Pelangi Timur"
+        class="w-16 h-16 object-contain"
+    >
+</div>
+
+                <!-- DESKTOP NAVIGATION MENU -->
+                <div class="hidden lg:flex items-center space-x-1 font-medium text-sm text-slate-700">
+                    <button onclick="navigateTo('beranda')" class="nav-item px-3 py-2 rounded-lg hover:text-sky-600 transition">Beranda</button>
+                    
+                    <!-- DROPDOWN PROFIL -->
+                    <div class="relative group">
+                        <button class="nav-item px-3 py-2 rounded-lg hover:text-sky-600 flex items-center gap-1 transition">
+                            Profil <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-slate-100 py-2 hidden group-hover:block transition duration-200">
+                            <a href="#tentang" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Tentang Perusahaan</a>
+                            <a href="#sejarah" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Sejarah Perusahaan</a>
+                            <a href="#visi-misi" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Visi & Misi</a>
+                            <a href="#direksi" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Direksi & Dewan Pengawas</a>
+                            <a href="#struktur" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Struktur Organisasi</a>
+                            <a href="#sumber-air" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Sumber Air Baku</a>
+                            <a href="#ipa" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Instalasi Pengolahan Air (IPA)</a>
+                        </div>
+                    </div>
+
+                    <!-- DROPDOWN LAYANAN PELANGGAN -->
+                    <div class="relative group">
+                        <button class="nav-item px-3 py-2 rounded-lg hover:text-sky-600 flex items-center gap-1 transition">
+                            Layanan Pelanggan <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-slate-100 py-2 hidden group-hover:block transition duration-200">
+                            <a href="#pengaduan" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Layanan Pengaduan Online</a>
+                            <a href="#cek-tagihan" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Cek Tagihan Air</a>
+                            <a href="#simulasi-tagihan" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Simulasi Tagihan Air</a>
+                            <a href="#tarif-air" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Tarif Air Minum</a>
+                            <a href="#tarif-pasang" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Tarif Sambungan Baru</a>
+                        </div>
+                    </div>
+
+                    <!-- DROPDOWN INFORMASI PUBLIK -->
+                    <div class="relative group">
+                        <button class="nav-item px-3 py-2 rounded-lg hover:text-sky-600 flex items-center gap-1 transition">
+                            Informasi Publik <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-slate-100 py-2 hidden group-hover:block transition duration-200">
+                            <a href="#informasi" onclick="filterInfo('berita')" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Berita & Artikel</a>
+                            <a href="#informasi" onclick="filterInfo('promosi')" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Promosi & Program</a>
+                            <a href="#informasi" onclick="filterInfo('gangguan')" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Info Gangguan Air</a>
+                            <a href="#uji-lab" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Uji Laboratorium Air</a>
+                            <a href="#laporan" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Laporan Keuangan & Kinerja</a>
+                        </div>
+                    </div>
+
+                    <!-- DROPDOWN HUBUNGI KAMI -->
+                    <div class="relative group">
+                        <button class="nav-item px-3 py-2 rounded-lg hover:text-sky-600 flex items-center gap-1 transition">
+                            Hubungi Kami <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute top-full right-0 w-60 bg-white rounded-xl shadow-xl border border-slate-100 py-2 hidden group-hover:block transition duration-200">
+                            <a href="#kantor" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium">Kantor Pelayanan</a>
+                            <a href="#whistleblowing" class="block px-4 py-2 hover:bg-sky-50 hover:text-sky-600 text-xs font-medium text-amber-600 font-semibold">Whistleblowing System (WBS)</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACTION BUTTON -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="#pengaduan" class="bg-sky-600 hover:bg-sky-700 text-white font-medium px-4 py-2.5 rounded-xl shadow-md shadow-sky-600/20 text-xs flex items-center gap-2 transition transform active:scale-95">
+                        <i data-lucide="message-square-plus" class="w-4 h-4"></i> Buat Pengaduan
+                    </a>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU OVERLAY -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">Beranda</a>
+            
+            <details class="group">
+                <summary class="flex justify-between items-center py-2 text-slate-800 font-semibold cursor-pointer border-b border-slate-100">
+                    Profil <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </summary>
+                <div class="pl-4 py-2 space-y-2 text-sm text-slate-600">
+                    <a href="#tentang" class="block py-1">Tentang Perusahaan</a>
+                    <a href="#sejarah" class="block py-1">Sejarah Perusahaan</a>
+                    <a href="#visi-misi" class="block py-1">Visi & Misi</a>
+                    <a href="#direksi" class="block py-1">Direksi & Dewan Pengawas</a>
+                    <a href="#struktur" class="block py-1">Struktur Organisasi</a>
+                    <a href="#sumber-air" class="block py-1">Sumber Air Baku</a>
+                    <a href="#ipa" class="block py-1">Instalasi Pengolahan Air</a>
+                </div>
+            </details>
+
+            <details class="group">
+                <summary class="flex justify-between items-center py-2 text-slate-800 font-semibold cursor-pointer border-b border-slate-100">
+                    Layanan Pelanggan <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </summary>
+                <div class="pl-4 py-2 space-y-2 text-sm text-slate-600">
+                    <a href="#pengaduan" class="block py-1">Pengaduan Online</a>
+                    <a href="#cek-tagihan" class="block py-1">Cek Tagihan Air</a>
+                    <a href="#simulasi-tagihan" class="block py-1">Simulasi Tagihan</a>
+                    <a href="#tarif-air" class="block py-1">Tarif Air Minum</a>
+                    <a href="#tarif-pasang" class="block py-1">Tarif Sambungan Baru</a>
+                </div>
+            </details>
+
+            <details class="group">
+                <summary class="flex justify-between items-center py-2 text-slate-800 font-semibold cursor-pointer border-b border-slate-100">
+                    Informasi Publik <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </summary>
+                <div class="pl-4 py-2 space-y-2 text-sm text-slate-600">
+                    <a href="#informasi" class="block py-1">Berita & Promosi</a>
+                    <a href="#uji-lab" class="block py-1">Uji Laboratorium Air</a>
+                    <a href="#laporan" class="block py-1">Laporan Perusahaan</a>
+                </div>
+            </details>
+
+            <a href="#kantor" class="block py-2 text-slate-800 font-semibold border-b border-slate-100">Kantor Pelayanan</a>
+            <a href="#whistleblowing" class="block py-2 text-amber-600 font-semibold">Whistleblowing System</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative hero-gradient text-white overflow-hidden py-20 lg:py-28">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-sky-200 text-xs font-medium border border-white/20">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300"></i> Komitmen Pelayanan Air Bersih Bermutu
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                        Mengalirkan Kehidupan, <br class="hidden sm:inline"/>Menjaga Kualitas Hidup Masyarakat
+                    </h1>
+                    <p class="text-sky-100 text-base sm:text-lg max-w-2xl font-light">
+                        PERUMDAM Pelangi Timur berkomitmen menyediakan layanan air minum yang jernih, sehat, dan berkelanjutan untuk mewujudkan masyarakat sejahtera.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#cek-tagihan" class="bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="search" class="w-4 h-4"></i> Cek Tagihan Air
+                        </a>
+                        <a href="#simulasi-tagihan" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-6 py-3.5 rounded-xl border border-white/30 transition text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="calculator" class="w-4 h-4"></i> Simulasi Tagihan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- QUICK CHECK BILL CARD IN HERO -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/95 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-2xl text-slate-800 border border-white">
+                        <div class="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                    <i data-lucide="receipt" class="w-5 h-5 text-sky-600"></i> Cek Tagihan Cepat
+                                </h3>
+                                <p class="text-xs text-slate-500">Masukkan Nomor Pelanggan Anda</p>
+                            </div>
+                            <span class="bg-sky-100 text-sky-700 text-[10px] font-bold px-2 py-1 rounded">24/7 Service</span>
+                        </div>
+
+                        <form id="hero-check-form" onsubmit="event.preventDefault(); processQuickCheck();" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor ID Pelanggan</label>
+                                <div class="relative">
+                                    <input type="text" id="hero-nopel" placeholder="Contoh: 1002341" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 focus:outline-none text-sm pl-10">
+                                    <i data-lucide="user" class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5"></i>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 rounded-xl shadow-md transition text-sm flex items-center justify-center gap-2">
+                                Check Tagihan Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+
+                        <!-- RESULT MODAL/BOX -->
+                        <div id="quick-result" class="hidden mt-4 p-4 bg-sky-50 rounded-xl border border-sky-200 text-xs space-y-2">
+                            <div class="flex justify-between border-b border-sky-100 pb-1">
+                                <span class="text-slate-500">Nama Pelanggan:</span>
+                                <span class="font-bold text-slate-800" id="res-nama">-</span>
+                            </div>
+                            <div class="flex justify-between border-b border-sky-100 pb-1">
+                                <span class="text-slate-500">Bulan Tagihan:</span>
+                                <span class="font-medium text-slate-700" id="res-bulan">-</span>
+                            </div>
+                            <div class="flex justify-between border-b border-sky-100 pb-1">
+                                <span class="text-slate-500">Pemakaian Air:</span>
+                                <span class="font-medium text-slate-700" id="res-m3">- m³</span>
+                            </div>
+                            <div class="flex justify-between pt-1">
+                                <span class="font-bold text-slate-800">Total Tagihan:</span>
+                                <span class="font-extrabold text-sky-700 text-sm" id="res-total">Rp -</span>
+                            </div>
+                            <div class="mt-3 text-center pt-2">
+                                <span class="inline-block bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded font-medium">Status: Belum Dibayar</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFIL PERUSAHAAN (TENTANG, SEJARAH, VISI MISI) -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sky-600 font-bold text-xs uppercase tracking-widest">Profil Perusahaan</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Mengenal Perumdam Pelangi Timur</h2>
+                <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-800 leading-snug">
+                        Menyediakan Layanan Air Minum untuk Masyarakat Belitung Timur
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        PERUMDAM Pelangi Timur merupakan Badan Usaha Milik Daerah (BUMD) Kabupaten Belitung Timur yang bergerak dalam pengelolaan dan pelayanan air minum bagi masyarakat. Melalui penyediaan dan pendistribusian air bersih, PERUMDAM Pelangi Timur berupaya memenuhi kebutuhan air masyarakat serta meningkatkan kualitas pelayanan secara berkelanjutan untuk mendukung kesehatan dan kesejahteraan masyarakat.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-2xl font-extrabold text-sky-600">45.000+</p>
+                            <p class="text-xs text-slate-500 font-medium mt-1">Sambungan Pelanggan Active</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                            <p class="text-2xl font-extrabold text-sky-600">98.5%</p>
+                            <p class="text-xs text-slate-500 font-medium mt-1">Kualitas Standar Permenkes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sejarah" class="bg-slate-50 rounded-2xl p-8 border border-slate-200 relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-5">
+                        <i data-lucide="history" class="w-64 h-64 text-sky-900"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="history" class="w-5 h-5 text-sky-600"></i> Sejarah Singkat
+                    </h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        PERUMDAM Pelangi Timur merupakan perusahaan daerah yang bergerak dalam pengelolaan dan pelayanan air minum bagi masyarakat Kabupaten Belitung Timur, Provinsi Kepulauan Bangka Belitung. Dalam menjalankan perannya, perusahaan berupaya mendukung pemenuhan kebutuhan air bersih masyarakat melalui pengelolaan sarana dan prasarana serta pelayanan pendistribusian air.
+                    </p>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Seiring dengan kebutuhan masyarakat yang terus berkembang, PERUMDAM Pelangi Timur diharapkan terus meningkatkan kualitas pelayanan dan pengelolaan air minum agar dapat memberikan manfaat bagi masyarakat secara berkelanjutan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VISI DAN MISI -->
+            <div id="visi-misi" class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-sky-900 to-sky-800 text-white rounded-2xl p-8 md:col-span-1 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="target" class="w-6 h-6 text-amber-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3">Visi Kami</h4>
+                        <p class="text-sky-100 text-sm leading-relaxed font-light">
+                            "Memberikan pelayanan yang prima dan menjadikan perusahaan sehat, mandiri, dan terpercaya."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-8 md:col-span-2 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="compass" class="w-6 h-6 text-sky-600"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-4">Misi Perusahaan</h4>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <span>Memberi pelayanan yang terbaik kepada masyarakat Belitung timur dengan meningkatkan kuantitas, kualitas dan kontinuitas air bersih.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <span>Memperluas jangkauan pelayanan sehingga dapat dinikmati oleh masyarakat yang lebih luas.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <span>Meningkatkan kepedulian perusahaan terhadap pelanggan dan masyarakat.</span>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <span>Meningkatkan profesionalitas pegawai dengan memanfaatkan teknologi  informasi (IT) dan diklat-diklat.</span>
+                                <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5"></i>
+                                <span>Meningkatkan kesejahteraan pegawai perusahaan.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIREKSI, DEWAN PENGAWAS & STRUKTUR ORGANISASI -->
+    <section id="direksi" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sky-600 font-bold text-xs uppercase tracking-widest">Manajemen</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Direksi & Dewan Pengawas</h2>
+                <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- CARDS DIREKSI -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 text-center">
+                    <img src="https://placehold.co/200x200/0284c7/ffffff?text=Direktur+Utama" alt="Direktur Utama" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-sky-100">
+                    <h4 class="text-lg font-bold text-slate-900">Muhammad Zubair, ST</h4>
+                    <p class="text-xs text-sky-600 font-semibold uppercase mb-2">Direktur Utama</p>
+                    <p class="text-xs text-slate-500">Memimpin arah strategis dan tata kelola perusahaan secara menyeluruh.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 text-center">
+                    <img src="https://placehold.co/200x200/0369a1/ffffff?text=Direktur+Teknik" alt="Direktur Teknik" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-sky-100">
+                    <h4 class="text-lg font-bold text-slate-900">Budi Santoso, S.T.</h4>
+                    <p class="text-xs text-sky-600 font-semibold uppercase mb-2">Direktur Teknik</p>
+                    <p class="text-xs text-slate-500">Bertanggung jawab atas operasional IPA, jaringan pemipaan, dan produksi air.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-100 text-center">
+                    <img src="https://placehold.co/200x200/0e7490/ffffff?text=Dewan+Pengawas" alt="Dewan Pengawas" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-sky-100">
+                    <h4 class="text-lg font-bold text-slate-900">Drs. Hendra Kusuma, M.Si.</h4>
+                    <p class="text-xs text-sky-600 font-semibold uppercase mb-2">Ketua Dewan Pengawas</p>
+                    <p class="text-xs text-slate-500">Pengawasan operasional dan pemastian akuntabilitas kinerja BUMD.</p>
+                </div>
+            </div>
+
+            <!-- STRUKTUR ORGANISASI -->
+            <div id="struktur" class="mt-16 bg-white rounded-2xl p-8 border border-slate-200 text-center">
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Struktur Organisasi</h3>
+                <p class="text-slate-500 text-xs mb-6">Bagan Tata Kelola Organisasi Perumdam Pelangi Timur</p>
+                <div class="bg-white rounded-2xl p-4 md:p-8 shadow-sm border border-gray-100">
+    <img
+        src="assets/struktur-organisasi.jpeg"
+        alt="Bagan Struktur Organisasi PERUMDAM Pelangi Timur"
+        class="w-full h-auto object-contain mx-auto"
+        loading="lazy"
+    >
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFRASTRUKTUR (SUMBER AIR BAKU & IPA) -->
+    <section id="sumber-air" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sky-600 font-bold text-xs uppercase tracking-widest">Infrastruktur</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Sumber Air Baku & Pengolahan</h2>
+                <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-4 text-sky-600">
+                        <i data-lucide="waves" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Sumber Air Baku</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        PERUMDAM Pelangi Timur memanfaatkan beberapa sumber air baku untuk mendukung operasional Instalasi Pengolahan Air (IPA) dalam memenuhi kebutuhan air bersih masyarakat Kabupaten Belitung Timur. Sumber air baku tersebut berasal dari kolong dan sungai yang digunakan untuk mendukung proses pengolahan dan pendistribusian air kepada pelanggan.
+Sumber air baku yang mendukung operasional IPA PERUMDAM Pelangi Timur meliputi:
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Pancur — Kolong Kejenun I, luas 28.125 ha.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Damar — Kolong Kejenun II, luas 5.000 ha.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Parit Kemang I — Kolong Parit Kemang I, luas 29,7 ha.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Parit Kemang II — Kolong Parit Kemang II, luas 1,79 ha.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Gantung — Sungai Lenggang, luas 67.500 ha.</li>
+                    </ul>
+                </div>
+
+                <div id="ipa" class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                    <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-4 text-sky-600">
+                        <i data-lucide="factory" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Instalasi Pengolahan Air (IPA)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        PERUMDAM Pelangi Timur memiliki sejumlah Instalasi Pengolahan Air (IPA) yang berperan dalam mengolah air baku sebelum didistribusikan kepada masyarakat. Setiap instalasi didukung oleh sumber air baku yang berbeda sesuai dengan lokasi dan wilayah pelayanannya. Keberadaan instalasi ini menjadi bagian penting dalam mendukung penyediaan dan pendistribusian air bersih bagi masyarakat Kabupaten Belitung Timur.
+
+Instalasi Pengolahan Air yang terdapat pada PERUMDAM Pelangi Timur meliputi:
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Pancur — Menggunakan sumber air baku Kolong Kejenun I.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Damar — Menggunakan sumber air baku Kolong Kejenun II.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Parit Kemang I — Menggunakan sumber air baku Kolong Parit Kemang I.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Parit Kemang II — Menggunakan sumber air baku Kolong Parit Kemang II.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-500"></i> IPA Gantung — Menggunakan sumber air baku Sungai Lenggang.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYANAN PELANGGAN (CEK TAGIHAN, SIMULASI, TARIF) -->
+    <section id="cek-tagihan" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sky-400 font-bold text-xs uppercase tracking-widest">Layanan Pelanggan</span>
+                <h2 class="text-3xl font-bold mt-2">Simulasi & Tarif Air Minum</h2>
+                <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- SIMULASI TAGIHAN AIR -->
+                <div id="simulasi-tagihan" class="bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-700">
+                    <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                        <i data-lucide="calculator" class="w-5 h-5 text-sky-400"></i> Kalkulator Simulasi Tagihan
+                    </h3>
+                    <p class="text-xs text-slate-400 mb-6">Hitung estimasi tagihan pemakaian air bulanan Anda</p>
+
+                    <div class="space-y-4 text-slate-200">
+                        <div>
+                            <label class="block text-xs font-semibold mb-1">Golongan Pelanggan</label>
+                            <select id="sim-golongan" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                                <option value="rumah_tangga">Rumah Tangga (Rp 3.500 / m³)</option>
+                                <option value="niaga">Niaga / Komersial (Rp 6.000 / m³)</option>
+                                <option value="industri">Industri (Rp 8.500 / m³)</option>
+                                <option value="sosial">Sosial / Tempat Ibadah (Rp 2.000 / m³)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold mb-1">Estimasi Pemakaian (m³)</label>
+                            <input type="number" id="sim-m3" value="15" min="0" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        </div>
+
+                        <button onclick="calculateSimulation()" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-semibold py-3 rounded-xl transition text-sm">
+                            Hitung Estimasi
+                        </button>
+
+                        <div id="sim-result" class="mt-4 p-4 bg-slate-900 rounded-xl border border-slate-700 space-y-2 text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Biaya Pemakaian Air:</span>
+                                <span id="sim-pemakaian-val" class="font-medium">Rp 52.500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Biaya Pemeliharaan Meter:</span>
+                                <span>Rp 10.000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Biaya Administrasi:</span>
+                                <span>Rp 5.000</span>
+                            </div>
+                            <div class="border-t border-slate-800 pt-2 flex justify-between font-bold text-sm text-sky-400">
+                                <span>Total Estimasi Tagihan:</span>
+                                <span id="sim-total-val">Rp 67.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABEL TARIF AIR & SAMBUNGAN BARU -->
+                <div class="space-y-8">
+                    <!-- TARIF AIR -->
+                    <div id="tarif-air" class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+                        <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="badge-percent" class="w-5 h-5 text-sky-400"></i> Tarif Air Minum Per m³
+                        </h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-xs text-slate-300">
+                                <thead class="bg-slate-900 text-sky-400 uppercase">
+                                    <tr>
+                                        <th class="p-3">Golongan</th>
+                                        <th class="p-3">0 - 10 m³</th>
+                                        <th class="p-3">> 10 m³</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-700">
+                                    <tr>
+                                        <td class="p-3 font-medium text-white">Sosial</td>
+                                        <td class="p-3">Rp 2.000</td>
+                                        <td class="p-3">Rp 2.500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-medium text-white">Rumah Tangga</td>
+                                        <td class="p-3">Rp 3.500</td>
+                                        <td class="p-3">Rp 4.500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-medium text-white">Niaga / Bisnis</td>
+                                        <td class="p-3">Rp 6.000</td>
+                                        <td class="p-3">Rp 7.500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-medium text-white">Industri</td>
+                                        <td class="p-3">Rp 8.500</td>
+                                        <td class="p-3">Rp 10.000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- TARIF SAMBUNGAN BARU -->
+                    <div id="tarif-pasang" class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+                        <h4 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <i data-lucide="wrench" class="w-5 h-5 text-amber-400"></i> Tarif Sambungan Baru
+                        </h4>
+                        <p class="text-xs text-slate-400 mb-4">Estimasi biaya pendaftaran pasang baru standar (pipa 1/2 inch)</p>
+                        <div class="flex justify-between items-center p-3 bg-slate-900 rounded-xl border border-slate-700">
+                            <div>
+                                <p class="text-sm font-semibold text-white">Biaya Pemasangan Standar</p>
+                                <p class="text-[11px] text-slate-400">Termasuk Meter Air, Pipa Pemasok & Aksesoris</p>
+                            </div>
+                            <span class="text-lg font-extrabold text-amber-400">Rp 1.450.000</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM PENGADUAN PELANGGAN ONLINE -->
+    <section id="pengaduan" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
+                <div class="text-center mb-8">
+                    <span class="text-sky-600 font-bold text-xs uppercase tracking-widest">Respon Cepat</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-1">Layanan Pengaduan Online</h2>
+                    <p class="text-slate-500 text-xs mt-1">Sampaikan keluhan air mati, kebocoran pipa, atau kendala meteran Anda</p>
+                </div>
+
+                <form onsubmit="event.preventDefault(); submitComplaint();" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor ID Pelanggan</label>
+                            <input type="text" placeholder="Masukkan ID Pelanggan" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Lengkap</label>
+                            <input type="text" placeholder="Nama Pelapor" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp / HP</label>
+                            <input type="tel" placeholder="0812xxxx" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Kategori Pengaduan</label>
+                            <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                                <option>Air Keruh / Keruh</option>
+                                <option>Air Tidak Mengalir / Mati</option>
+                                <option>Kebocoran Pipa / Meteran</option>
+                                <option>Akurasi Meter Air</option>
+                                <option>Lainnya</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Alamat Lokasi Kejadian</label>
+                        <input type="text" placeholder="Alamat lengkap lokasi gangguan" required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Deskripsi Laporan Pengaduan</label>
+                        <textarea rows="4" placeholder="Jelaskan kendala yang Anda alami secara mendetail..." required class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 rounded-xl shadow-md transition text-sm">
+                        Kirim Pengaduan Sekarang
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMASI PUBLIK (BERITA, PROMOSI, GANGGUAN, UJI LAB, LAPORAN) -->
+    <section id="informasi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-sky-600 font-bold text-xs uppercase tracking-widest">Informasi Publik</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-2">Berita & Pengumuman Resmi</h2>
+                <div class="w-16 h-1 bg-sky-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- FILTER TABS -->
+            <div class="flex justify-center gap-2 mb-10 flex-wrap">
+                <button onclick="filterInfo('semua')" class="info-tab px-4 py-2 rounded-full text-xs font-semibold bg-sky-600 text-white shadow-sm">Semua</button>
+                <button onclick="filterInfo('berita')" class="info-tab px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200">Berita</button>
+                <button onclick="filterInfo('promosi')" class="info-tab px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200">Promosi</button>
+                <button onclick="filterInfo('gangguan')" class="info-tab px-4 py-2 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200">Info Gangguan</button>
+            </div>
+
+            <!-- CARDS INFORMASI -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- ITEM 1: GANGGUAN -->
+                <div class="info-card gangguan bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+                    <div class="p-6">
+                        <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Info Gangguan</span>
+                        <h4 class="text-base font-bold text-slate-900 mt-3 mb-2">Pemeliharaan Pipa Induk IPA Unit 2</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Sehubungan dengan perbaikan pipa distribusi utama diameter 300mm, suplai air di Wilayah Timur akan mengalami penurunan debit sementara pada hari Sabtu.
+                        </p>
+                    </div>
+                    <div class="px-6 py-3 bg-slate-100 text-[11px] text-slate-500 flex justify-between items-center border-t border-slate-200">
+                        <span>24 Oktober 2026</span>
+                        <a href="#" class="text-sky-600 font-semibold hover:underline">Detail →</a>
+                    </div>
+                </div>
+
+                <!-- ITEM 2: PROMOSI -->
+                <div class="info-card promosi bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+                    <div class="p-6">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Promosi</span>
+                        <h4 class="text-base font-bold text-slate-900 mt-3 mb-2">Program Promo Diskon Pasang Baru 50%</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Dalam rangka Hari Jadi Daerah, Perumdam Pelangi Timur memberikan potongan harga biaya pemasangan baru khusus pelanggan golongan Rumah Tangga.
+                        </p>
+                    </div>
+                    <div class="px-6 py-3 bg-slate-100 text-[11px] text-slate-500 flex justify-between items-center border-t border-slate-200">
+                        <span>18 Oktober 2026</span>
+                        <a href="#" class="text-sky-600 font-semibold hover:underline">Detail →</a>
+                    </div>
+                </div>
+
+                <!-- ITEM 3: BERITA -->
+                <div class="info-card berita bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between">
+                    <div class="p-6">
+                        <span class="bg-sky-100 text-sky-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Berita</span>
+                        <h4 class="text-base font-bold text-slate-900 mt-3 mb-2">Perumdam Pelangi Timur Raih Penghargaan Top BUMD</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Perumdam Pelangi Timur kembali mengukir prestasi nasional dalam kategori Pelayanan Publik & Kinerja Keuangan Sangat Sehat.
+                        </p>
+                    </div>
+                    <div class="px-6 py-3 bg-slate-100 text-[11px] text-slate-500 flex justify-between items-center border-t border-slate-200">
+                        <span>10 Oktober 2026</span>
+                        <a href="#" class="text-sky-600 font-semibold hover:underline">Detail →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UJI LAB & LAPORAN PERUSAHAAN -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+                <!-- UJI LAB -->
+                <div id="uji-lab" class="bg-sky-50 rounded-2xl p-6 border border-sky-100 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-sky-600 text-white rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="flask-conical" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Hasil Uji Laboratorium Kualitas Air</h4>
+                        <p class="text-xs text-slate-600 mb-3">Pemeriksaan berkala parameter Mikrobiologi, Fisika, dan Kimia sesuai Permenkes No. 2 Tahun 2023.</p>
+                        <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-sky-600 hover:underline">
+                            Download Hasil Uji Lab Terbaru (PDF) <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LAPORAN PERUSAHAAN -->
+                <div id="laporan" class="bg-amber-50 rounded-2xl p-6 border border-amber-100 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-amber-500 text-white rounded-xl flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="file-text" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Laporan Keuangan & Kinerja Perusahaan</h4>
+                        <p class="text-xs text-slate-600 mb-3">Transparansi tata kelola BUMD melalui Publikasi Laporan Keuangan Audited & Laporan Kinerja Tahunan.</p>
+                        <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 hover:underline">
+                            Unduh Laporan Tahunan Audited <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HUBUNGI KAMI & KANTOR PELAYANAN & WHISTLEBLOWING -->
+    <section id="kantor" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- KANTOR PELAYANAN -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <span class="text-sky-600 font-bold text-xs uppercase tracking-widest">Hubungi Kami</span>
+                        <h2 class="text-2xl font-bold text-slate-900 mt-1">Kantor Pelayanan & Layanan Pelanggan</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                            <h4 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+                                <i data-lucide="building-2" class="w-4 h-4 text-sky-600"></i> Kantor Pusat
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-2">Jln. Pegadaian - Desa Baru - Manggar - Belitung Timur</p>
+                            <p class="text-xs text-slate-500">Telp: (0717) 123-4567</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                            <h4 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-sky-600"></i> Unit Cabang 
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-2">Jl. Raya Gantung No. 12</p>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-2">Jl. Raya Kampit No. 13</p>
+                            <p class="text-xs text-slate-500">Telp: (0717) 765-4321</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-4 border border-slate-200 overflow-hidden shadow-sm">
+                        <h4 class="text-xs font-bold text-slate-700 mb-2">Peta Lokasi Kantor Pusat</h4>
+                        <div class="bg-slate-100 rounded-xl h-48 flex items-center justify-center text-slate-400 text-xs">
+                            <i data-lucide="map" class="w-6 h-6 mr-2"></i> Peta Google Maps Terintegrasi
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WHISTLEBLOWING SYSTEM (WBS) -->
+                <div id="whistleblowing" class="lg:col-span-5 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl p-8 text-white shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6 text-white">
+                            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Whistleblowing System (WBS)</h3>
+                        <p class="text-amber-100 text-xs leading-relaxed mb-6">
+                            Layanan pengaduan rahasia terkait dugaan pelanggaran, kecurangan (fraud), gratifikasi, atau pelanggaran kode etik oleh insan PERUMDAM Pelangi Timur.
+                        </p>
+                        <div class="bg-black/10 rounded-xl p-4 text-xs space-y-2 border border-white/10">
+                            <p class="font-semibold">Kerahasiaan Identitas Pelapor Dijamin 100%</p>
+                            <p class="text-amber-100">Sampaikan laporan Anda secara langsung ke Tim Satuan Pengawas Intern (SPI).</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="alert('Form WBS Terbuka. Identitas Anda dijaga secara anonim.')" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition text-xs flex items-center justify-center gap-2">
+                            <i data-lucide="lock" class="w-4 h-4 text-amber-400"></i> Buat Laporan Rahasia WBS
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <!-- FOOTER -->
+<footer class="bg-slate-900 text-slate-400 text-xs border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- FOOTER CONTENT -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+
+            <!-- KOLOM 1: LOGO DAN DESKRIPSI -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <img
+                        src="assets/logo-perumdam.png"
+                        alt="Logo Resmi PERUMDAM Pelangi Timur"
+                        class="w-16 h-16 object-contain bg-white rounded-full p-1"
+                    >
+
+                    <span class="font-bold text-base text-white">
+                        PERUMDAM Pelangi Timur
+                    </span>
+                </div>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Memberikan pelayanan penyediaan air minum secara profesional,
+                    jernih, dan berkelanjutan untuk kesejahteraan masyarakat.
+                </p>
+            </div>
+
+            <!-- KOLOM 2: PROFIL PERUSAHAAN -->
+            <div>
+                <h5 class="text-white font-bold mb-3">
+                    Profil & Perusahaan
+                </h5>
+
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#tentang" class="hover:text-white transition">
+                            Tentang Kami
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#visi-misi" class="hover:text-white transition">
+                            Visi & Misi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#direksi" class="hover:text-white transition">
+                            Direksi & Pengawas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#struktur" class="hover:text-white transition">
+                            Struktur Organisasi
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- KOLOM 3: LAYANAN PELANGGAN -->
+            <div>
+                <h5 class="text-white font-bold mb-3">
+                    Layanan Pelanggan
+                </h5>
+
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#pengaduan" class="hover:text-white transition">
+                            Pengaduan Online
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cek-tagihan" class="hover:text-white transition">
+                            Cek Tagihan Air
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#simulasi-tagihan" class="hover:text-white transition">
+                            Simulasi Tarif
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tarif-pasang" class="hover:text-white transition">
+                            Sambungan Baru
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- KOLOM 4: KONTAK DAN MEDIA SOSIAL -->
+            <div>
+                <h5 class="text-white font-bold mb-3">
+                    Kontak & Medsos
+                </h5>
+
+                <p class="mb-2">
+                    Call Center: (0717) 123-4567
+                </p>
+
+                <p class="mb-4">
+                    Email: humas@pelangitimur.co.id
+                </p>
+
+                <div class="flex space-x-3">
+                    <a href="#"
+                       class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-sky-600 hover:text-white transition">
+                        <i data-lucide="facebook" class="w-4 h-4"></i>
+                    </a>
+
+                    <a href="#"
+                       class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-sky-600 hover:text-white transition">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+
+                    <a href="#"
+                       class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-sky-600 hover:text-white transition">
+                        <i data-lucide="youtube" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="border-t border-slate-800 mt-12 pt-6 text-center text-slate-500">
+            <p>
+                &copy; 2026 PERUMDAM Pelangi Timur. Hak Cipta Dilindungi Undang-Undang.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Quick Bill Check Process Mockup
+        function processQuickCheck() {
+            const nopel = document.getElementById('hero-nopel').value;
+            const resBox = document.getElementById('quick-result');
+            
+            if(!nopel) return;
+
+            document.getElementById('res-nama').innerText = "Bpk. Rahmat Supardi";
+            document.getElementById('res-bulan').innerText = "Oktober 2026";
+            document.getElementById('res-m3').innerText = "18 m³";
+            document.getElementById('res-total').innerText = "Rp 79.500";
+
+            resBox.classList.remove('hidden');
+        }
+
+        // Bill Simulation Calculator
+        function calculateSimulation() {
+            const gol = document.getElementById('sim-golongan').value;
+            const m3 = parseFloat(document.getElementById('sim-m3').value) || 0;
+            
+            let rate = 3500;
+            if(gol === 'niaga') rate = 6000;
+            if(gol === 'industri') rate = 8500;
+            if(gol === 'sosial') rate = 2000;
+
+            const airCost = m3 * rate;
+            const admin = 5000;
+            const meter = 10000;
+            const total = airCost + admin + meter;
+
+            document.getElementById('sim-pemakaian-val').innerText = 'Rp ' + airCost.toLocaleString('id-ID');
+            document.getElementById('sim-total-val').innerText = 'Rp ' + total.toLocaleString('id-ID');
+        }
+
+        // Filter Information Grid
+        function filterInfo(category) {
+            const cards = document.querySelectorAll('.info-card');
+            cards.forEach(card => {
+                if(category === 'semua' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Complaint Form Submission
+        function submitComplaint() {
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-5 right-5 bg-emerald-600 text-white px-6 py-4 rounded-xl shadow-2xl z-50 text-xs flex items-center gap-3';
+            notification.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5"></i> <span>Pengaduan Anda berhasil dikirim! Nomor Tiket: #PLG-${Math.floor(100000 + Math.random() * 900000)}</span>`;
+            document.body.appendChild(notification);
+            lucide.createIcons();
+
+            setTimeout(() => {
+                notification.remove();
+            }, 4000);
+        }
+
+        // Navigation Helper
+        function navigateTo(id) {
+            const el = document.getElementById(id);
+            if(el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
